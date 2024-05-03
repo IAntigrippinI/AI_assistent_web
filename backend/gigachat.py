@@ -2,7 +2,6 @@ import requests
 import json
 
 from getToken import get_token
-from config import PAYLOAD, HEADERS
 
 
 class GigaChat_Client:
