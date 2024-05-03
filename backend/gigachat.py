@@ -8,7 +8,7 @@ class GigaChat_Client:
     def __init__(self, base_url) -> None:
         self.base_url = base_url
 
-    def get_answer(self, quastion: str) -> str:
+    def get_answer(self, quastion: str):
 
         payload = json.dumps(
             {
