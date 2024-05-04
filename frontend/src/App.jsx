@@ -1,14 +1,16 @@
+import React from 'react'
 import { useState } from 'react'
 import {Spin} from 'antd'
+import Text_area from './components/textArea'
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-     <Spin/>
+    <div className='mx-auto my-auto'>
+      <Text_area/>
     </div>
-  )
+  ) 
 }
 
 export default App
