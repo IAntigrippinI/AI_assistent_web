@@ -7,9 +7,11 @@ import Text_area from './components/textArea'
 
 function App() {
   return (
+    <>
     <div className='mx-auto my-auto'>
       <Text_area/>
     </div>
+    </>
   ) 
 }
 
