@@ -3,6 +3,8 @@ import json
 
 from getToken import get_token
 
+# from db.function_db import insert_messages, get_messages
+
 
 class GigaChat_Client:
     def __init__(self, base_url) -> None:
@@ -31,4 +33,12 @@ class GigaChat_Client:
         resp = requests.request(
             "POST", url=self.base_url, headers=headers, data=payload, verify=False
         )
+        # with open("result_get.json", "w") as fp:
+        # json.dump(resp.text, fp)
+        # insert_messages(
+        #     1, quastion, json.loads(resp.text)["choices"][0]["message"]["content"]
+        # )
+        # print(type(json.loads(resp.text)))
+        # res = get_messages(1)
+
         return json.loads(resp.text)["choices"][0]["message"]["content"]
