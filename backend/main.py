@@ -8,11 +8,12 @@ from router import router as routers
 origins = [
     "http://127.0.0.1:5173",
     "http://localhost:5173",
+    "http://127.0.0.1:3306",
+    "http://localhost:3306",
 ]
 
 app = FastAPI()
 app.include_router(routers)
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,

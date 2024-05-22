@@ -56,7 +56,7 @@ def insert_messages(user_id, user_message: str, bot_answer: str) -> str:
 
 
 def get_messages(user_id: int) -> dict:
-    result = []
+    result = {"content": []}
     db = connect()
 
     cursor = db.cursor()
@@ -66,11 +66,11 @@ def get_messages(user_id: int) -> dict:
     data = cursor.fetchall()
     db.close()
     for i in range(len(data)):
-        result.append({"usermessage": data[i][0], "answer": data[i][1]})
+        result["content"].append({"user_message": data[i][0], "bot": data[i][0]})
     with open("result.json", "w") as fp:
         json.dump(result, fp)
-
-    return "done"
+    return result
+    # return json.loads(result)
 
 
 def delete_all_messages():
