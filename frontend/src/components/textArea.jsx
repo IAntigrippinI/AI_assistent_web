@@ -25,14 +25,17 @@ function Text_area() {
 
 return (
   <>
-    <div className='flex-col mx-auto my-auto'>
-      <TextArea onChange={changeText} rows={4} placeholder="maxLength is 255" maxLength={255} style={{width:200}}/>
-      <Flex gap="small" wrap className=''>
-          <Button onClick = {handleClick} type="primary">Спросить</Button>
-      </Flex>
-    </div>
-    <div>
-      <Answer_area answ = {answerData}/>
+    <div className='flex-auto gap-10 mr-10' style={{width:screen}}> 
+    <div className='text-white'>
+        <Answer_area answ = {answerData}/>
+      </div>
+      <div className='mx-auto my-auto'>
+        <TextArea onChange={changeText} rows={4} placeholder="maxLength is 255" maxLength={255} style={{width:screen}}/>
+        <Flex gap="small" wrap className=''>
+            <Button onClick = {handleClick} type="primary">Спросить</Button>
+        </Flex>
+      </div>
+      
     </div>
   </>
 );}

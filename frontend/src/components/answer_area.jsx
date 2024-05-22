@@ -4,11 +4,11 @@ function Answer_area(props) {
     const {answ}= props
     return(  
     <>
-    <div>
+    <div style={{width:screen}} className='text-white'>
         <Divider orientation="left" plain>
-        Ответ GigaChat
+        <p className='text-white'>Ответ GigaChat</p>
         </Divider>
-        <p>
+        <p className=''>
         {answ}
         </p>
 
